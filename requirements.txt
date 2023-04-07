@@ -1,0 +1,5 @@
+py-cord
+pynacl
+orjson
+aiohttp
+python-dotenv
