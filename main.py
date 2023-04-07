@@ -46,7 +46,7 @@ class MyBot(commands.Bot):
     async def start_app(self):
         await self.wait_until_ready()
         await self.inter_runner.setup()
-        site = web.TCPSite(self.inter_runner, "localhost", 8080)
+        site = web.TCPSite(self.inter_runner, "0.0.0.0", os.getenv("PORT", 8080))
         await site.start()
         print("Webserver is ready")
 
